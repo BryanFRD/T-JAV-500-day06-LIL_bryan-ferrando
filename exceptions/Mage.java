@@ -13,7 +13,7 @@ public class Mage extends Character {
 
     @Override
     public void attack(String arg) throws WeaponException {
-        if(arg == null){
+        if(arg == null || arg.isEmpty()){
             throw new WeaponException(name + ": I refuse to fight with my bare hands.");
         }
         if(arg.equalsIgnoreCase("magic") || arg.equalsIgnoreCase("wand")){
