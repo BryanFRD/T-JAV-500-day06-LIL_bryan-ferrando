@@ -13,11 +13,11 @@ public abstract class Character implements Movable {
         this.RPGClass = RPGClass;
     }
 
-    public void attack(String arg) {
+    public void tryToAttack(String arg) {
         System.out.println(this.name + ": Rrrrrrrrr....");
     }
 
-    public void tryToAttack(String arg) throws WeaponException {
+    public void attack(String arg) throws WeaponException {
         System.out.println(this.name + ": Rrrrrrrrr....");
     }
 
