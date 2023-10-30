@@ -1,4 +1,3 @@
-package exceptions;
 
 public interface Movable {
 

@@ -1,4 +1,4 @@
-package exceptions;
+
 
 public class Mage extends Character {
 
