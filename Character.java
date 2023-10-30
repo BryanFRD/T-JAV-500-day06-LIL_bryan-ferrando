@@ -7,7 +7,7 @@ public abstract class Character implements Movable {
     protected int wit = 2;
     protected final String RPGClass;
 
-    public Character(String name, String RPGClass) {
+    protected Character(String name, String RPGClass) {
         this.name = name;
         this.RPGClass = RPGClass;
     }
