@@ -12,10 +12,15 @@ public class Warrior extends Character {
     }
 
     @Override
-    public void attack(String arg) {
+    public void attack(String arg) throws WeaponException {
+        if(arg == null) {
+throw new WeaponException(name + ": I refuse to fight with my bare hands.");
+        }
         if(arg.equalsIgnoreCase("hammer") || arg.equalsIgnoreCase("sword")){
             super.attack(arg);
             System.out.println(name + ": I'll crush you with my " + arg + "!");
+        } else {
+            throw new WeaponException(name + ": A " + arg + "?? What should I do with this?!");
         }
     }
 

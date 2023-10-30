@@ -12,10 +12,15 @@ public class Mage extends Character {
     }
 
     @Override
-    public void attack(String arg) {
+    public void attack(String arg) throws WeaponException {
+        if(arg == null){
+            throw new WeaponException(name + ": I refuse to fight with my bare hands.");
+        }
         if(arg.equalsIgnoreCase("magic") || arg.equalsIgnoreCase("wand")){
             super.attack(arg);
             System.out.println(name + ": Feel the power of my " + arg + "!");
+        } else {
+            throw new WeaponException(name + ": I don't need this stupid " + arg + "! Don't misjudge my powers!");
         }
     }
 
