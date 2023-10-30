@@ -18,6 +18,11 @@ public abstract class Character implements Movable {
     }
 
     public void tryToAttack(String arg) throws WeaponException {
+        if(arg == null || arg.isEmpty()){
+            throw new WeaponException(name + ": I refuse to fight with my bare hands.");
+            return;
+        }
+
         System.out.println(this.name + ": Rrrrrrrrr....");
     }
 
