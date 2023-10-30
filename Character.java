@@ -16,6 +16,28 @@ public abstract class Character {
         System.out.println(this.name + ": Rrrrrrrrr....");
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public int getAgility() {
+        return agility;
+    }
+
+    public int getLife() {
+        return life;
+    }
+
+    public int getStrength() {
+        return strength;
+    }
+
+    public int getWit() {
+        return wit;
+    }
+
+    public String getRPGClass() {
+        return RPGClass;
+    }
 
 }
