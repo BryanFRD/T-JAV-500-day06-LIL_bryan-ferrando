@@ -12,6 +12,7 @@ public class Warrior extends Character {
     @Override
     public void attack(String arg) {
         if(arg.equalsIgnoreCase("hammer") || arg.equalsIgnoreCase("sword")){
+            super.attack(arg);
             System.out.println(name + ": I'll crush you with my " + arg + "!");
         }
     }
