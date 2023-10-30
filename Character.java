@@ -60,4 +60,8 @@ public abstract class Character implements Movable {
         System.out.println(this.name + ": moves left");
     }
 
+    public final void unsheathe(){
+        System.out.println(this.name + ": unsheathes his weapon.");
+    }
+
 }
