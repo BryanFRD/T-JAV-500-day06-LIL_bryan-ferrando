@@ -1,5 +1,4 @@
 
-
 public class Mage extends Character {
 
     public Mage(String name){
@@ -12,7 +11,15 @@ public class Mage extends Character {
     }
 
     @Override
-    public void attack(String arg) throws WeaponException {
+    public void attack(String arg) {
+        if(arg.equalsIgnoreCase("magic") || arg.equalsIgnoreCase("wand")){
+            super.attack(arg);
+            System.out.println(name + ": Feel the power of my " + arg + "!");
+        }
+    }
+
+    @Override
+    public void tryToAttack(String arg) throws WeaponException {
         if(arg == null || arg.isEmpty()){
             throw new WeaponException(name + ": I refuse to fight with my bare hands.");
         }
