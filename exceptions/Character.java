@@ -13,17 +13,19 @@ public abstract class Character implements Movable {
         this.RPGClass = RPGClass;
     }
 
-    public void attack(String arg) {
+    public void attack(String arg) throws WeaponException {
+        if(arg == null || arg.isEmpty()){
+            throw new WeaponException(name + ": I refuse to fight with my bare hands.");
+        }
         System.out.println(this.name + ": Rrrrrrrrr....");
     }
 
-    public void tryToAttack(String arg) throws WeaponException {
-        if(arg == null || arg.isEmpty()){
-            throw new WeaponException(name + ": I refuse to fight with my bare hands.");
-            return;
+    public void tryToAttack(String arg) {
+        try {
+            attack(arg);
+        } catch (WeaponException ex){
+            System.out.println(ex.getMessage());
         }
-
-        System.out.println(this.name + ": Rrrrrrrrr....");
     }
 
     public String getName() {
