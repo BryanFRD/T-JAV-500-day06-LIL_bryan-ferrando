@@ -6,6 +6,7 @@ public class Warrior extends Character {
         strength = 10;
         agility = 8;
         wit = 3;
+        System.out.println(name + ": My name will go down in history!");
     }
 
     @Override
